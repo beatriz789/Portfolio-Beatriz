@@ -1,0 +1,328 @@
+
+/*-------MEDIAQUERIES-------------------*/
+@media screen and (max-width: 600px) {
+	header,
+  body section#projets .portfolio,
+  section#contact > div{
+    flex-direction:column;
+  }
+svg{
+  display:none;
+}
+body #container .containerRight{
+  width:90%;
+  left:0;
+  padding:1rem;
+}
+body #container .containerLeft{
+display:none;
+}
+body section#intro .presentation{
+		left:0;
+	}
+	body section#projets .portfolio .item{
+		width:100%;
+		margin-left:0;
+	}
+	body section#intro h1{
+		font-size:3rem;
+	}
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px){
+	header,
+  body section#projets .portfolio,
+  section#contact > div{
+    flex-direction:column;
+  }
+	body section#projets .portfolio .item{
+		width:100%;
+		margin-left:0;
+	}
+	
+}
+/*-------KEYFRAMES-------------------*/
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(43,206,167,0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(43,206,167,0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 10px rgba(43,206,167,0);
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(43,206,167,0.4)
+    box-shadow: 0 0 0 0 rgba(43,206,167,0.4)
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(43,206,167,0);
+      box-shadow:  0 0 0 10px rgba(43,206,167,0);
+  }
+  100% {
+      -moz-box-shadow:  0 0 0 10px rgba(43,206,167,0);
+      box-shadow:  0 0 0 10px rgba(43,206,167,0);
+  }
+}
+
+
+/*-------FONTS----------*/
+@font-face {
+    font-family: 'Helvetica';
+    src: url('fonts/HelveticaNeueLTStd-Roman.woff2') format('woff2'),
+        url('fonts/HelveticaNeueLTStd-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'alice';
+    src: url('fonts/alice-regular-webfont.woff2') format('woff2'),
+         url('fonts/alice-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?g55moq');
+  src:  url('fonts/icomoon.eot?g55moq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?g55moq') format('truetype'),
+    url('fonts/icomoon.woff?g55moq') format('woff'),
+    url('fonts/icomoon.svg?g55moq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+/*----GLOBAL-----------------*/
+
+body{
+	background:#fff;
+	color:#000;
+	font-family:'Helvetica';
+	font-zize:1rem;
+}
+h1,h2,h3{
+
+	text-align: left;
+	font-family: 'Alice';
+	margin:6rem 0 1rem;
+}
+h2{
+	font-size:4rem;
+}
+h3{
+	font-family:'Helvetica';
+	margin-bottom:0.5rem;
+}
+ul li{
+
+	list-style:square;
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+	color:#FC247B;
+}
+p{
+	margin:0.2rem 0;
+}
+/*----CONTAINER-----------------*/
+
+#container .containerLeft {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image:url(../img/portrait.jpg);
+    background-position: 50% 50%;
+}
+#container .containerLeft {
+    display: inline-block;
+    width: 24%;
+    height: 100vh;
+    font-size: 20px;
+    vertical-align: top;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#container .containerRight{
+	padding:2rem 4rem;
+	width:76%;
+	box-sizing:border-box;
+	position:relative;
+	left:24%;
+
+
+}
+
+/*----SECTION----------------*/
+section{
+	margin:4rem 0 8rem;
+}
+
+/*----INTRO-----------------*/
+section#intro{
+	margin: 6rem 0 0rem;
+}
+section#intro header h1{
+	text-transform: uppercase;
+	font-weight: normal;
+	margin:0;
+	font: 1.6rem 'Helvetica';
+}
+section#intro header{
+	display:flex;
+	justify-content: space-between;
+}
+section#intro header .availability{
+ padding-right:1rem;
+}
+section#intro header .availability .pulse {
+  margin:0 1rem 0 0;
+  display:inline-block;
+  width: 12px;
+  height:12px;
+  border-radius: 50%;
+  background: #FC247B;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(252,36,123, 0.2);
+  animation: pulse 2s infinite;
+}
+section#intro header .availability .pulse:hover {
+  animation: none;
+}
+
+section#intro h1{
+	font : 5rem 'Alice';
+}
+section#intro h1 span{
+	color:#FC247B;
+}
+
+section#intro .presentation{
+	display:flex;
+	justify-content: flex-start;
+	left:-7rem;
+	position:relative;
+
+}
+section#intro svg.deco{
+	width:10rem;
+	position:relative;
+	top:1rem;
+
+}
+
+
+/*-----------PORTFOLIO-----------*/
+section#projets .portfolio{
+	display:flex;
+	justify-content: space-between;
+}
+
+
+section#projets .portfolio h3{
+	font-weight:normal;margin-top:0;
+}
+
+section#projets .portfolio p{
+	font-size:0.9rem;
+	color:#666;
+	margin:0rem 0rem 1rem;
+  min-height:10rem;
+}
+
+section#projets .portfolio .item{
+	width:30%;
+	padding:1rem;
+	margin:1rem;
+	border:1px solid black;
+
+}
+
+section#projets .portfolio .item:first-child{
+	margin-left:0;
+
+}
+
+section#projets .portfolio .item img{
+	max-width: 18rem;
+	max-width: 100%;
+  height: auto;
+}
+
+
+
+/*-----------CONTACT-----------*/
+
+section#contact > div{
+	display:flex;
+	justify-content:space-between;
+
+}
+section#contact a{
+
+	color:#FC247B;
+	margin: 0 0 1.4rem;
+	font:1.2rem 'Helvetica';
+	margin-right:1rem;
+
+}
+section#contact a.whatsapp{
+
+	color:#25d366;
+
+
+}
+section#contact a:before{
+font:2rem 'icomoon';
+	 position:relative;
+	  padding-right:0.4rem;
+	  top:0.4rem;
+
+}
+
+section#contact a.mail:before{
+
+content: "\e903";
+top:0.6rem;
+
+}
+section#contact a.whatsapp:before{
+
+content: "\e902";
+  color: #25d366;
+
+
+
+
+}
+
+section#contact a.linkedin:before {
+
+  content: "\e900";
+  color: #0077b5;
+}
+
+section#contact a.twitter:before {
+
+  content: "\e901";
+  color: #1da1f2;
+}
